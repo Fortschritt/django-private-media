@@ -7,7 +7,7 @@ class DefaultPrivatePermissions(object):
         Extensions could base the permissions on the path too.
         """
         user = request.user
-        if not user.is_authenticated():
+        if not user.is_authenticated:
             return False
         elif user.is_superuser:
             return True

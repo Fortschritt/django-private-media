@@ -80,7 +80,7 @@ And then provide a permissioning class like this (which lets staff and the owner
     class OwnerPkPermissions(object):
         def has_read_permission(self, request, path):
             user = request.user
-            if not user.is_authenticated():
+            if not user.is_authenticated:
                 return False
             elif user.is_superuser:
                 return True
